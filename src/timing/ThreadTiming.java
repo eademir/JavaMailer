@@ -1,6 +1,6 @@
 package timing;
 
-import pinger.Ping;
+import ipaddress.IpAddress;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ public class ThreadTiming implements Runnable{
     public void run() {
         while(true){
             try {
-                Ping.sendPingRequest();
+                IpAddress.getIpAddress();
             } catch (IOException e) {
                 e.printStackTrace();
             }
